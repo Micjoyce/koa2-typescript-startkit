@@ -7,7 +7,7 @@
 ### clone project
 
 ```shell
-https://github.com/seerline/sisdb.client.server.git
+https://github.com/Micjoyce/koa2-typescript-startkit.git
 ```
 
 ### install and start
