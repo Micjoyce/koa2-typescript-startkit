@@ -8,7 +8,6 @@ services:
 
 before_install:
   - docker-compose up -d
-  - sleep 120 # todo: write detection script
 
 cache:
   directories:
