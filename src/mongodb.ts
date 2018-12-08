@@ -6,10 +6,10 @@ export const connect = () => {
   const mongoUrl = config.mongoUrl
   mongoose.connect(mongoUrl, { useNewUrlParser: true })
   mongoose.connection.on('error', (error) => {
-    console.log('connection error', error)
+    console.info('connection error', error)
   })
   mongoose.connection.once('open', () => {
-    console.log('connect success')
+    console.info('connect success')
   })
   return mongoose
 }

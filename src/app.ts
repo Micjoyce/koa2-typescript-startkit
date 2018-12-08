@@ -1,11 +1,11 @@
-import Koa from 'koa'
 import cors from 'kcors'
+import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import logger from 'koa-logger'
-import routers from './routers'
+import errorHandle from './middlewares/errorHandle'
 import { connect as connectMongodb } from './mongodb'
 import redisClient from './redisClient'
-import errorHandle from './middlewares/errorHandle'
+import routers from './routers'
 
 const app = new Koa()
 

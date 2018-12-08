@@ -3,6 +3,6 @@ export default {
   mongoUrl: 'mongodb://localhost:27017/project_db',
   redis: {
     host: 'localhost',
-    port: 6379
-  }
+    port: 6379,
+  },
 }

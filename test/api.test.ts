@@ -1,5 +1,5 @@
 import assert = require('assert')
-import { after, describe, it } from 'mocha'
+import { describe, it } from 'mocha'
 import supertest from 'supertest'
 import app from '../src/app'
 

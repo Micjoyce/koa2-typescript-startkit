@@ -14,7 +14,7 @@
     "dev": "NODE_ENV=development nodemon",
     "build": "tsc",
     "start": "NODE_ENV=producation node ./dist/src/server.js",
-    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
     "test": "NODE_ENV=test mocha --exit --require espower-typescript/guess ./test/**/*.ts",
     "test:cov": "nyc npm test && open ./coverage/src/index.html",
     "test:watch": "npm run test -- --watch-extensions ts --watch -R min",

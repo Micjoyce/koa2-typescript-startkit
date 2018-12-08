@@ -11,14 +11,14 @@ export interface User {
   facebook: string,
   twitter: string,
   google: string,
-  tokens: IAuthToken[],
+  tokens: AuthToken[],
 
   profile: {
     name: string,
     gender: string,
     location: string,
     website: string,
-    picture: string
+    picture: string,
   },
 }
 
@@ -27,7 +27,7 @@ export interface UserModel extends User, mongoose.Document {
   gravatar (size: number): string
 }
 
-interface IAuthToken {
+interface AuthToken {
   accessToken: string,
   kind: string
 }
@@ -49,10 +49,10 @@ const userSchema = new mongoose.Schema({
     gender: String,
     localtion: String,
     website: String,
-    picture: String
-  }
+    picture: String,
+  },
 }, {
-  timestamps: true
+  timestamps: true,
 })
 
 /**
@@ -94,7 +94,6 @@ userSchema.methods.gravatar = function (size: number) {
   return `https://gravatar.com/avatar/${md5}?s=${size}&d=retro`
 }
 
-const User = mongoose.model('User', userSchema)
-export default User
+export default mongoose.model('User', userSchema)
 
 // export const User: mongoose.Model<UserModel> = mongoose.model<UserModel>('User', userSchema)

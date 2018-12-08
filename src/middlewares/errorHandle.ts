@@ -1,5 +1,5 @@
 import Boom from 'boom'
-import { Middleware, Context } from 'koa'
+import { Context, Middleware } from 'koa'
 
 export default (): Middleware => async (ctx: Context, next) => {
   try {

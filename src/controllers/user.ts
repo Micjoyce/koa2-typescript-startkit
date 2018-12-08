@@ -4,7 +4,7 @@ import * as userService from '../services/user'
 export const getUsers: Middleware = async (ctx: Context) => {
   ctx.body = { success: true, message: 'success', result: [
     { name: 'michael' },
-    { name: 'joyce' }
+    { name: 'joyce' },
   ] }
 }
 
