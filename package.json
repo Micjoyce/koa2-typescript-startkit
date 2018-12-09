@@ -15,6 +15,7 @@
     "build": "tsc",
     "start": "NODE_ENV=producation node ./dist/src/server.js",
     "lint": "tslint -c tslint.json -p tsconfig.json",
+    "clean": "ets clean",
     "test": "NODE_ENV=test mocha --exit --require espower-typescript/guess ./test/**/*.ts",
     "test:cov": "nyc npm test && open ./coverage/src/index.html",
     "test:watch": "npm run test -- --watch-extensions ts --watch -R min",
@@ -27,6 +28,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "boom": "^7.3.0",
+    "egg-ts-helper": "^1.17.1",
     "ioredis": "^4.2.0",
     "jsonwebtoken": "^8.4.0",
     "kcors": "^2.2.2",
