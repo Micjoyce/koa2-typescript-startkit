@@ -1,4 +1,4 @@
-import Boom from 'boom'
+import Boom from '@hapi/boom'
 import { Context, Middleware } from 'koa'
 
 export default (): Middleware => async (ctx: Context, next) => {
